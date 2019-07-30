@@ -17,8 +17,8 @@ Steps to hosting the SampleApp on AWS EC2
 
 #cloud-config
 runcmd:
- - sudo yum install -y git
- - sudo git clone https://rajatdudeja:<password>#@github.com/rajatdudeja/sampleapp_vm_scripted.git /root/sampleapp_vm_scripted
+  - sudo yum install -y git
+  - sudo git clone https://rajatdudeja:<password>#@github.com/rajatdudeja/sampleapp_vm_scripted.git /root/sampleapp_vm_scripted
 
 """
 
