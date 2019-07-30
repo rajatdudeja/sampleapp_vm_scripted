@@ -103,14 +103,19 @@ if [ $? -eq 0 ]; then echo "Done"; else echo "Fail" && exit -1;fi
 #git clone "https://github.com/taniarascia/pdo.git"
 #if [ $? -eq 0 ]; then echo "Done"; else echo "Fail" && exit -1;fi
 
-echo -e "\n***** 10. Rename PDO to SampleApp and Copy to /var/www/html *****"
-mv /root/sampleapp_vm_scripted/SampleApp /var/www/html/
+echo -e "\n***** 10. Copy SampleApp to /var/www/html/ *****"
+echo 
+cp -R /root/sampleapp_vm_scripted/SampleApp /var/www/html/
+if [ $? -eq 0 ]; then echo "Done"; else echo "Fail" && exit -1;fi
 #mv pdo SampleApp
 #mv SampleApp /var/www/html/SampleApp
 #mv /root/init.sql /var/www/html/SampleApp/data/init.sql
 
+echo -e "\n***** 11. Set SELINUX to enforcing *****"
+sudo setenforce 0
+if [ $? -eq 0 ]; then echo "Done"; else echo "Fail" && exit -1;fi
 
-echo -e "\n***** 11. Test Setup *****"
+echo -e "\n***** 12. Test Setup *****"
 echo -e "Open http://<publicIp of webservre>/SampleApp/public/index.php"
 
 
