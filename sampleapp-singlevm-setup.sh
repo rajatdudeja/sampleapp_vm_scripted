@@ -98,13 +98,14 @@ systemctl restart httpd.service
 if [ $? -eq 0 ]; then echo "Done"; else echo "Fail" && exit -1;fi
 
 
-echo -e "\n***** 9. GIT Clone the SampleApp repo *****"
-cd /var/www/html
-git clone "https://github.com/taniarascia/pdo.git"
-if [ $? -eq 0 ]; then echo "Done"; else echo "Fail" && exit -1;fi
+#echo -e "\n***** 9. GIT Clone the SampleApp repo *****"
+#cd /var/www/html
+#git clone "https://github.com/taniarascia/pdo.git"
+#if [ $? -eq 0 ]; then echo "Done"; else echo "Fail" && exit -1;fi
 
 echo -e "\n***** 10. Rename PDO to SampleApp and Copy to /var/www/html *****"
-mv pdo SampleApp
+mv /root/sampleapp_vm_scripted/SampleApp /var/www/html/
+#mv pdo SampleApp
 #mv SampleApp /var/www/html/SampleApp
 #mv /root/init.sql /var/www/html/SampleApp/data/init.sql
 
