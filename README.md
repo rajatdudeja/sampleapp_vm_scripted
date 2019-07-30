@@ -14,6 +14,7 @@ Steps to hosting the SampleApp on AWS EC2
 2. While provisioning, add the below UserData (the cloud-config script, which will run only at instance launch time)
 
 """
+
 #cloud-config
 runcmd:
  - sudo yum install -y git
