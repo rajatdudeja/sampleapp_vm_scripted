@@ -1,3 +1,5 @@
+This is the Master README file, ignore any other README files included in the code section
+
 # sampleapp_vm_scripted
 A 2-tier sample application deployed in VM / Physical env. Contains scripts to setup Web and DB server on the same VM
 Contains the below files:
@@ -10,9 +12,9 @@ Steps to hosting the SampleApp on AWS EC2
 1. Provision a CentOS7 VM (use official AMI ami-02e60be79e78fef21 or any new one)
 
 2. While provisioning, add the below UserData (the cloud-config script, which will run only at instance launch time)
-"""
-"#"cloud-config
 
+"""
+#cloud-config
 runcmd:
  - sudo yum install -y git
  - sudo git clone https://rajatdudeja:<password>#@github.com/rajatdudeja/sampleapp_vm_scripted.git /root/sampleapp_vm_scripted
