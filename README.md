@@ -10,14 +10,14 @@ Steps to hosting the SampleApp on AWS EC2
 1. Provision a CentOS7 VM (use official AMI ami-02e60be79e78fef21 or any new one)
 
 2. While provisioning, add the below UserData (the cloud-config script, which will run only at instance launch time)
->>>>COPY BELOW LINE >>>>
-#cloud-config
+"""
+"#"cloud-config
 
 runcmd:
  - sudo yum install -y git
  - sudo git clone https://rajatdudeja:<password>#@github.com/rajatdudeja/sampleapp_vm_scripted.git /root/sampleapp_vm_scripted
 
->>> Copy till above line only >>>
+"""
 
 Note: 
   a. replace the <password> with the password of the repo
